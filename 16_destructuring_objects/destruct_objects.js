@@ -12,8 +12,8 @@ const developer = {
   }
 };
 
-let area,id;
-({area,id} = developer);
+let area, id;
+({ area, id } = developer);
 console.log(area);
 // const {
 //   area: areaDeveloper = 'BackEnd',
