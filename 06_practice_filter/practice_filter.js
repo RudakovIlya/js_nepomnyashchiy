@@ -1,5 +1,8 @@
 const names = ['Mikhail', 'Ivan', 'Albert', 'John', 'Ian', 'Petr', 'Alexandr', 'Oleg', 'Jaroslav', 'Vsevolod'];
 
+const shortNames = names.filter(item => item.length < 5);
+console.log(shortNames);
+
 const products = [
   {
     id: 1,
@@ -33,6 +36,9 @@ const products = [
   },
 ];
 
+const cheapProducts = products.filter(item => item.price < 300);
+console.log(cheapProducts);
+
 const developers = [
   {
     id: 1,
@@ -55,3 +61,6 @@ const developers = [
     skills: ['HTML', 'CSS', 'Git', 'JavaScript', 'TypeScript', 'React']
   },
 ];
+
+const tsDevelopers = developers.filter(item => item.skills.includes('TypeScript'));
+console.log(tsDevelopers);
