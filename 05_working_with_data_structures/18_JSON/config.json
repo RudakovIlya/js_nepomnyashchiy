@@ -1,0 +1,11 @@
+{
+  "firstName": "Ilya",
+  "age": 24,
+  "skills": [
+    "CSS",
+    "JS"
+  ],
+  "languages": {
+    "key": "value"
+  }
+}
