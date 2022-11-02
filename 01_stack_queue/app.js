@@ -30,3 +30,4 @@ arr2.pop();
 arr2.pop();
 console.log(arr2);
 console.log("1234");
+
