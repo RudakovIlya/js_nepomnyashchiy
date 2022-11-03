@@ -20,8 +20,8 @@ let order = [];
 
 function addToBasket(productId) {
   // TODO: добавить проверку наличия товара в заказе (при наличии выдать alert, что товар уже в корзине)
-
-  if (order.find(item => item.id == productId)) return alert('Товар уже в корзине');
+  const search = order.find(item => item.id == productId);
+  if (search) return alert('Товар уже в корзине');
 
   order.push(products.find(item => item.id == productId));
 

@@ -24,12 +24,10 @@ const validateInputValue = () => {
 };
 
 
-
 form.addEventListener('submit', e => {
   e.preventDefault();
-   if(validateInputValue()){
+  if (validateInputValue()) {
     alert("Access granted");
     form.reset();
   }
 })
-
