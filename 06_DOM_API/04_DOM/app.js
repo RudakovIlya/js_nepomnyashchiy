@@ -44,8 +44,18 @@ function createTodo(text) {
 
 }
 
+function removeFromStorage(removedTodo) {
+  const todos = JSON.parse(localStorage.getItem('tasks')) || [];
+
+  localStorage.setItem(
+    'tasks',
+    JSON.stringify(todos.filter((todo) => todo !== removedTodo))
+  );
+}
+
 function deleteTodo() {
   this.removeEventListener('click', deleteTodo);
+  removeFromStorage(this.innerText)
   this.remove();
 }
 
