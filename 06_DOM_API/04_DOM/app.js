@@ -2,6 +2,7 @@ const list = document.querySelector('#todos');
 const button = document.querySelector('button');
 
 button.addEventListener('click', handleClick);
+document.addEventListener('DOMContentLoaded', loadTodos);
 
 function handleClick() {
 
@@ -9,8 +10,23 @@ function handleClick() {
 
   if (newTodo) {
     createTodo(newTodo);
+    saveToStorage(newTodo);
+    this.previousElementSibling.value = '';
   } else {
     alert('input field is empty');
+  }
+}
+
+function saveToStorage(todo) {
+  const todos = JSON.parse(localStorage.getItem('tasks')) || [];
+
+  localStorage.setItem('tasks', JSON.stringify([...todos, todo]));
+}
+
+function loadTodos() {
+  const todos = JSON.parse(localStorage.getItem('tasks'));
+  if(todos) {
+    todos.forEach(todo => createTodo(todo));
   }
 }
 
