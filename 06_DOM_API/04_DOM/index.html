@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM API</title>
+  <style>
+    *{
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: 600;
+      text-align: center;
+    }
+    ul{
+      border: 1px solid grey;
+      max-width: 350px;
+      min-height: 70px;
+      border-radius: 20px;
+      margin: 40px auto;
+      list-style: none;
+      padding: 20px;
+    }
+    li{
+      cursor:pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h1>DOM API</h1>
+
+<div>
+  <input type="text" placeholder="todo">
+  <button>Add task</button>
+</div>
+
+<ul id="todos"></ul>
+<script src="app.js"></script>
+</body>
+</html>
